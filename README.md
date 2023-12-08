@@ -1,8 +1,7 @@
-# React + Vite
+# Carrinho de compras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Olá me chamo juan, hoje estou iniciando um tópico muito importante para o desenvolvimento web, criação de um Carrinho de compras utilizando React+Vite.
 
-Currently, two official plugins are available:
+ Url:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ Estou utilizando o createContext, ele é um gerenciador de estado goblal.Dentro da pasta GlobalComponents estou Criando um tema que utilizarei globalmente em minha aplicação Carrinho de compras.

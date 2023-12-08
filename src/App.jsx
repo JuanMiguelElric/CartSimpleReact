@@ -3,11 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import { usarTema } from './GlobalComponent/theprovider';
+
+
 function App() {
   const [count, setCount] = useState(0)
+  const [tema]= usarTema();
 
   return (
     <>
+      <main className={tema? 'bg-black':'bg-light-2'} style={{height:'100vh',overflowY:'auto'}}>
+
+      </main>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
