@@ -1,4 +1,7 @@
-import Loading from "./components/loading/loading"
+import MenuPage from "./Component/loja/menu"
+
+
+
 
 
 
@@ -7,7 +10,8 @@ function App() {
   return (
     <>
       <div>
-        <Loading />
+        <MenuPage />
+        
      
 
       </div>
