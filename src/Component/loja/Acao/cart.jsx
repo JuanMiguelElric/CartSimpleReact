@@ -26,3 +26,17 @@ const DeleteItem = (cart,product)=>{
         product
     }
 }
+const ChangeCart = (LocalCart)=>{
+    return{
+        type:'CHANGE_CART',
+        LocalCart
+
+    }
+}
+export default{
+    Add,
+    AddItem,
+    RemoveItem,
+    DeleteItem,
+    ChangeCart
+}
