@@ -4,12 +4,13 @@ body{
 ul{
   display: flex;
   list-style: none;
-  background-color: aliceblue;
+
 
 }
 
 li{
 
   margin-right:5%;
-  background-color: aliceblue;
+
+
 }

@@ -6,7 +6,7 @@ const productList = [
         fk_idCategoria:1,
         name_product:"Boné Caçador bonito 2018",
         price:500,
-        image:"../../../../images/Bonedecaca.png",
+        image:"../../../../images/Bonedecaca.PNG",
         id_categoria:1,
         name_categoria: "Boné",
         selected:false
