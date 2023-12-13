@@ -128,9 +128,20 @@ const productList = [
         categoria:"internacional",
         fk_idCategoria:4,
         name_product:"Faca Tatica Estilosa Feita De Ouro",
+        image:"../../../../images/facatatica.png",
         price:950,
         id_categoria:4,
         name_categoria:"Facas",
+        selected:false
+    },
+    {
+        id_product:13,
+        categoria:"internacional",
+        fk_idCategoria:4,
+        name_product:"Faca Tatica Pirata 2024",
+        image:"../../../../images/pirata.png",
+        price:840,
+        id_categoria:4,
         selected:false
     }
 
