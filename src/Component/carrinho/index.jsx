@@ -1,0 +1,85 @@
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import cartActions from "../loja/Acao/cart"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+
+const Cart = () =>{
+    const cart = useSelector(state => state.cart)
+    const dipatch = useDispatch();
+    
+    let totalPrice =0;
+    for(let i = 0; i<cart.Cart.length;i++){
+        totalPrice +=(cart.Cart[i].price * cart)
+    }
+    if(cart.value > 0){
+        localStorage.setItem('loja:cart',JSON.stringify(cart))
+    }
+    return(
+        <>
+            <button type="button" className="btn-success" data-bs-toogle="modal" data-bs-target="#CartModal">
+                <span><FontAwesomeIcon icon="fa-thin fa-cart-shopping" /></span>
+                <span className="badge rounded-pill text-bg-warning">
+                    {cart.value}
+                </span>
+            </button>
+
+            <div className="modal fade" id="CartModal" tabIndex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title"id="CartModalLabel">Meu Carrinho</h5>
+                            <button className="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="modal-body table-responsive">
+                    <table className="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Produto</th>
+                                <th scope="col">Qtd</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cart.Cart.map( item =>{
+                                return(
+                                    <tr key={item.id}>
+                                        <th><button onClick={()=>dipatch(cartActions.DeleteItem(cart,item))} className="badge bg-danger"><FontAwesomeIcon icon="window-close" /></button></th>
+                                        <th><img className="img-fluid img-thumbnail" src={item.image}  alt={item.Name} style={{width:'50px'}} /></th>
+                                        <th><span className="badge badge-pill bg-warning">
+                                                {item.quantity}
+                                            </span>
+                                        </th>
+                                        <th>R$ {item.price.toFixed(2)}</th>
+                                        <th><button onClick={() => dispatch(cartActions.AddItem(cart, item))} className="badge badge-pill bg-primary"><FontAwesomeIcon icon="plus" /></button></th>
+                                        <th><button onClick={() => dispatch(cartActions.RemoveItem(cart, item))} className="badge badge-pill bg-danger"><FontAwesomeIcon icon="minus" /></button></th>
+                                        <th>R$ {(item.price*item.quantity).toFixed(2)}</th>
+                                    </tr>
+                                )
+                            })}
+                            <tr>
+                                <th colSpan="2" scope="col">Total</th>
+                                <th colSpan="3">{cart.value}itens</th>
+                                <th colSpan="2">R$ {totalPrice.toFixed(2)}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary"data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </>
+    )
+}
+export default Cart;

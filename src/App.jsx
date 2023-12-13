@@ -1,4 +1,6 @@
+import { Provider } from "react-redux"
 import MenuPage from "./Component/loja/menu"
+import store from "./Component/loja/reducers"
 
 
 
@@ -9,12 +11,16 @@ function App() {
 
   return (
     <>
-      <div>
-        <MenuPage />
-        
-     
+      <Provider store={store}>
+        <div>
 
-      </div>
+          <MenuPage />
+          
+      
+
+        </div>
+
+      </Provider>
       
     </>
   )

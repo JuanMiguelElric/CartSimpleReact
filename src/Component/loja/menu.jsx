@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from "../carrinho";
 
 
 const MenuPage = () =>{
@@ -15,6 +16,7 @@ const MenuPage = () =>{
                     <li>Contato</li>
                     <li>Agencias</li>
                     <li>Fretes</li>
+                    <li><Cart /></li>
                 </ul>
             </div>
 
