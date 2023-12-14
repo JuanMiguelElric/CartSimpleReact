@@ -31,7 +31,8 @@ const HomePage = () =>{
         }
     }
     return(
-        <Container>
+        <div className="container" style={{backgroundColor:"black"}}>
+
             <Row>
                 {/*<Col xs={3}>
                     <ListGroup>
@@ -61,7 +62,8 @@ const HomePage = () =>{
                     </Row>
                 </Col>
             </Row>
-        </Container>
+        </div>
+
 
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from "../carrinho";
+import logo from "../../images/pngegg.png"
 
 
 const MenuPage = () =>{
@@ -8,7 +9,7 @@ const MenuPage = () =>{
         <nav className=" navbar navbar-inverse navbar-dark bg-dark" >
             <div className="container ">
                 <div className="navbar-header">
-                    <h1 className="navbar-brand" >Loja</h1>
+                    <img src={logo} className="navbar-brand" alt="" style={{width:"3em"}} />
 
                 </div>
                 <ul className="d-flex p-3 text-white" >

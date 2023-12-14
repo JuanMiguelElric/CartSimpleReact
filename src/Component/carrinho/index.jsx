@@ -25,18 +25,18 @@ const Cart = () =>{
                 </span>
             </button>
 
-            <div className="modal fade" id="CartModal" tabIndex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
+            <div className=" modal " id="CartModal" tabIndex="-1" >
+                <div className="modal-dialog " >
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title"id="CartModalLabel">Meu Carrinho</h5>
+                            <h5 className="modal-title text-success"id="CartModalLabel">Meu Carrinho</h5>
                             <button className="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div className="modal-body table-responsive">
+                <div className="container modal-body table-responsive">
                     <table className="table table-hover">
                         <thead>
                             <tr>
@@ -54,7 +54,7 @@ const Cart = () =>{
                                 return(
                                     <tr key={item.id}>
                                         <th><button onClick={()=>dispatch(cartActions.DeleteItem(cart,item))} className="badge bg-danger"><FontAwesomeIcon icon={faWindowClose} /></button></th>
-                                        <th><img className="img-fluid img-thumbnail" src={item.image}  alt={item.Name} style={{width:'50px'}} /></th>
+                                        <th><img className="img-fluid img-thumbnail"  src={item.Image}  alt={item.Name} style={{width:'2em'}} /></th>
                                         <th><span className="badge badge-pill bg-warning">
                                                 {item.quantity}
                                             </span>
