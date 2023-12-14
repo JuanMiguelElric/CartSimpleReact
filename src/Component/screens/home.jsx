@@ -4,6 +4,9 @@ import { Button, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import Item from "../loja/item";
 import Card from "../loja/card";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Fade } from "react-awesome-reveal";
+import BannerRotativo from "../atributosdosite/banner1";
+
 
 const HomePage = () =>{
     const products = useSelector(state => state.products)
@@ -31,38 +34,46 @@ const HomePage = () =>{
         }
     }
     return(
-        <div className="container" style={{backgroundColor:"black"}}>
+        <>
+            <BannerRotativo />
+            <br />
+            <br />
+            <div className="container" style={{backgroundColor:"black",padding:"2rem"}}>
 
-            <Row>
-                {/*<Col xs={3}>
-                    <ListGroup>
+                <Row>
+                    {/*<Col xs={3}>
+                        <ListGroup>
 
-                        <ListGroup.Item variant="primary">
-                            <h5>Categorias é aqui</h5>
-                        </ListGroup.Item>
-                        {categoria.map(categoria=>(
-                            <Item
-                                key={categoria.id}
-                                name={categoria.name}
-                                details={count[categoria.name]}
-                            />
-                        ))}
-                    </ListGroup>
-                        </Col>*/}
-                <Col xs={12}>
-                    <Row>
-                        {products.map(item=>(
-                            <Card
-                                key={item.id_product}
-                                product={item}
-                            >
-                                {item.name_product}
-                            </Card>
-                        ))}
-                    </Row>
-                </Col>
-            </Row>
-        </div>
+                            <ListGroup.Item variant="primary">
+                                <h5>Categorias é aqui</h5>
+                            </ListGroup.Item>
+                            {categoria.map(categoria=>(
+                                <Item
+                                    key={categoria.id}
+                                    name={categoria.name}
+                                    details={count[categoria.name]}
+                                />
+                            ))}
+                        </ListGroup>
+                            </Col>*/}
+                    <Col xs={12}>
+                        <Fade cascade damping={0.5}>
+                            <Row>
+                                {products.map(item=>(
+                                    <Card
+                                        key={item.id_product}
+                                        product={item}
+                                    >
+                                        {item.name_product}
+                                    </Card>
+                                ))}
+                            </Row>
+
+                        </Fade>
+                    </Col>
+                </Row>
+            </div>
+        </>
 
 
     )

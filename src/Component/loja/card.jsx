@@ -10,7 +10,7 @@ const Card = ({product,children})=>{
     return(
         <div className="col-md-3">
             <div className="card" style={{marginBottom:'3rem'}} >
-                <img src={product.image} style={{width:'300px'}} alt={product.name_product} className="card-img-top"  />
+                <img src={product.image}  alt={product.name_product} className="card-img-top"  />
                 <div className="card-body">
                     <h6 className="card-title">{children}</h6>
                     <p className="card-text">R${product.price.toFixed(2)}</p>

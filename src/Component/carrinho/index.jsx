@@ -18,7 +18,7 @@ const Cart = () =>{
     }
     return(
         <>
-            <button type="button" className="btn-success" data-bs-toggle="modal" data-bs-target="#CartModal">
+            <button type="button" className="btn-dark" data-bs-toggle="modal" data-bs-target="#CartModal" >
                 <span><FontAwesomeIcon icon={faCartShopping} /></span>
                 <span className="badge rounded-pill text-bg-warning">
                     {cart.value}
@@ -54,7 +54,7 @@ const Cart = () =>{
                                 return(
                                     <tr key={item.id}>
                                         <th><button onClick={()=>dispatch(cartActions.DeleteItem(cart,item))} className="badge bg-danger"><FontAwesomeIcon icon={faWindowClose} /></button></th>
-                                        <th><img className="img-fluid img-thumbnail"  src={item.Image}  alt={item.Name} style={{width:'2em'}} /></th>
+                                        <th><img className="img-fluid img-thumbnail"  src={item.image}  alt={item.Name} style={{width:'2em'}} /></th>
                                         <th><span className="badge badge-pill bg-warning">
                                                 {item.quantity}
                                             </span>
