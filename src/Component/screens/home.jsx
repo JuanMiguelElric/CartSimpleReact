@@ -37,8 +37,7 @@ const HomePage = () =>{
         <>
             <BannerRotativo />
             <br />
-            <br />
-            <div className="container" style={{backgroundColor:"black",padding:"2rem"}}>
+            <div className="container bg-dark" style={{padding:"3rem"}}>
 
                 <Row>
                     {/*<Col xs={3}>
@@ -57,8 +56,12 @@ const HomePage = () =>{
                         </ListGroup>
                             </Col>*/}
                     <Col xs={12}>
-                        <Fade cascade damping={0.5}>
+                        <Fade cascade damping={1.0}>
                             <Row>
+                                <h4 className="text-white">Destaques</h4>
+                                <br />
+                                <br />
+                                <br />
                                 {products.map(item=>(
                                     <Card
                                         key={item.id_product}
