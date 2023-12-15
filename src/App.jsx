@@ -2,6 +2,7 @@ import { Provider } from "react-redux"
 import MenuPage from "./Component/loja/menu"
 import store from "./Component/loja/reducers"
 import HomePage from "./Component/screens/home"
+import Rotas from "./route"
 
 
 
@@ -17,7 +18,7 @@ function App() {
         <div>
 
           <MenuPage />
-          <HomePage />
+          <Rotas />
           
       
 
