@@ -3,7 +3,12 @@ import React from "react";
 const Login = () =>{
     return(
         <>
-            <h1>olá mundo</h1>
+            <div className="container">
+                <div className="Form text-center">
+                        <h1>sdada</h1>
+                </div>
+
+            </div>
         </>
     )
 }
