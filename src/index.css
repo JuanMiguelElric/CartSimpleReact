@@ -32,3 +32,11 @@ input{
   margin-bottom: 1rem;
   border-radius: 2rem;
 }
+.form-control{
+  border-radius: 6rem;
+}
+.btn-outline-secondary{
+  height: 2.5rem;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
