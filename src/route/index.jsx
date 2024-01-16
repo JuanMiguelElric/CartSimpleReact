@@ -8,7 +8,7 @@ export default function Rotas(){
     return(
         <BrowserRouter>
             <Routes>
-                <Route index element={<HomePage />}/>
+                <Route path="/CartSimpleReact/" index element={<HomePage />}/>
                 <Route path="login" element={<Login />} />
                 <Route path="cadastro" element={<CadastroUser />}/>
             </Routes>
